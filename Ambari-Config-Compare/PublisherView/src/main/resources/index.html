@@ -1,0 +1,220 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <title>Bootstrap Example</title>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+  <style>
+  	td{
+  		font-size:14px;
+  	}
+  </style>
+</head>
+<body>
+
+<div class="container" style="width:80%;">
+  <h1 style="float:top;">
+
+    <img style="margin-left:30px;top:-100px;max-width:200px;" src="./img/hwx.png" />
+    <div style="display:block;text-align:right;font-size:30px;">C<sup>3</sup> : Cluster Config Comparator</div>
+
+  </h1>
+
+
+<div class="container">
+    <div class="row">
+        <div class="col-md-6" style="border:1px;background-color:#44AC34;font-weight:bold;padding:5px;font-size:20px;">
+            Cluster 1
+        </div>
+        <div class="col-md-6" style="border:1px;background-color:#44AC34;font-weight:bold;padding:5px;font-size:20px;">
+            Cluster 2
+        </div>
+    </div>
+    <div class="row" style="margin-top:15px;">
+        <div class="col-md-6">
+             <label for="c1u">AMBARI Host & Port:</label>
+             <div style="width:100%;display:block;">
+			  <input type="text" class="form-control" id="c1h" style="width:75%;display:inline;">
+			  <input type="text" class="form-control" id="c1p" style="marging-left:15px;width:20%;display:inline;float:right;"  value="8080">
+			 </div>
+        </div>
+        <div class="col-md-6">
+             <label for="c2u">AMBARI Host & Port:</label>
+             <div style="width:100%;display:block;">
+			  <input type="text" class="form-control" id="c2h" style="width:75%;display:inline;">
+			  <input type="text" class="form-control" id="c2p" style="marging-left:15px;width:20%;display:inline;float:right;" value="8080">
+			 </div>
+        </div>
+    </div>
+    <div class="row">
+        <div class="col-md-6">
+             <label for="c1uid">User Id:</label>
+			  <input type="text" class="form-control" id="c1uid">
+        </div>
+        <div class="col-md-6">
+            <label for="c2uid">User Id:</label>
+		    <input type="text" class="form-control" id="c2uid">
+        </div>
+    </div>
+    <div class="row">
+        <div class="col-md-6">
+             <label for="c1p">Password:</label>
+			  <input type="password" class="form-control" id="c1p">
+        </div>
+        <div class="col-md-6">
+            <label for="c2p">Password:</label>
+		    <input type="password" class="form-control" id="c2p">
+        </div>
+    </div>     
+    
+   <div class="row">
+		<div class="col-md-12" style="margin:10px;position:relative;float:middle;">
+			<input type="button" name="compare" value=" Compare " style="padding:10px;position:relative;float:middle;">
+		</div>
+    </div>      
+    
+    <div class="row">
+		<hr />
+    </div>  
+<!--    <div class="row">
+		<div class="col-md-12" style="border:1px;background-color:#44AC34;font-weight:bold;padding:5px;font-size:20px;">
+			Hardware Config
+		</div>
+    </div>  
+
+    <div class="row" style="margin-top:15px;">
+        <div class="col-md-4" style="font-weight:bold;">
+			  Masters 
+        </div>
+        <div class="col-md-4">
+			2			    
+        </div>
+        <div class="col-md-4">
+		    3
+        </div>
+    </div>  
+
+    <div class="row">
+		<hr />
+    </div>  -->
+
+
+ <div class="row" style="width:100%;margin-top:20px;margin-bottom:20px;border:1px;">
+ 	<div  class="col-md-4" style="width:5%;display:inline;">&nbsp;</div>
+  	<div  class="col-md-4" style="width:40%;background-color:#B4F99E;text-align:center;font-weight:bold;padding:15px;font-size:20px;display:inline;">
+ 		HDP 2.6.3
+ 	</div>
+ 	<div  class="col-md-1" style="width:10%;display:inline;">&nbsp;</div>
+ 	<div  class="col-md-4" style="width:40%;background-color:#37D605;font-weight:bold;text-align:center;padding:15px;font-size:20px;display:inline;">
+ 		HDP 2.6.2
+ 	</div> 
+ </div>
+
+ <div class="row">
+		<div class="col-md-12" style="border:1px;background-color:#44AC34;font-weight:bold;padding:5px;font-size:20px;">
+			Host Groups
+		</div>
+    </div>  
+
+    <div class="row" style="margin-top:15px;">
+        <div class="col-md-2" style="font-weight:bold;">
+			  Host_Group_1 
+        </div>
+        <div class="col-md-5" style="float:left;">
+			<div class="row" style="margin-top:15px;">
+				<div style="width:90%;font-weight:bold;background-color:#f1f1f1;padding:4px;margin:2px;">
+					Cardinality : 
+				</div>
+			</div>
+			<div class="row" style="margin-top:15px;">
+				<div style="width:90%;font-weight:bold;background-color:#d1d1d1;padding:4px;margin:2px;">
+					Components : 
+				</div>
+			</div>
+			<div class="row" style="margin-top:15px;">
+				<div style="width:90%;font-weight:bold;background-color:#f1f1f1;padding:4px;margin:2px;">
+					Configurations :
+				</div>
+			</div>
+        </div>
+         <div class="col-md-5" style="float:left;">
+			<div class="row" style="margin-top:15px;">
+				<div style="width:90%;font-weight:bold;background-color:#f1f1f1;padding:4px;margin:2px;">
+					Cardinality : 
+				</div>
+			</div>
+			<div class="row" style="margin-top:15px;">
+				<div style="width:90%;font-weight:bold;background-color:#d1d1d1;padding:4px;margin:2px;">
+					Components : 
+				</div>
+			</div>
+			<div class="row" style="margin-top:15px;">
+				<div style="width:90%;font-weight:bold;background-color:#f1f1f1;padding:4px;margin:2px;">
+					Configurations :
+				</div>
+			</div>
+        </div>
+        
+    </div>  
+
+    <div class="row">
+		<hr />
+    </div> 
+    
+   <div class="row" id="config_heading">
+		<div class="col-md-12" style="border:1px;background-color:#44AC34;font-weight:bold;padding:5px;font-size:20px;">
+			Cluster Config&nbsp;&nbsp;&nbsp;&nbsp;<kbd style="background-color:#B4F99E;color:black;font-size:12px;">Only in Cluster 1</kbd>&nbsp;&nbsp;<kbd style="background-color:red;font-size:12px;">Different</kbd>&nbsp;&nbsp;<kbd style="background-color:#37D605;font-size:12px;">Only in Cluster 2</kbd>
+		</div>
+    </div>  
+
+
+
+<div class="panel-group">
+  <div class="panel panel-default">
+    <div class="panel-heading">
+      <h4 class="panel-title">
+        <a data-toggle="collapse" href="#collapse1">Collapsible panel</a>
+        &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<kbd style="background-color:#B4F99E;color:black;">5</kbd>&nbsp;&nbsp;<kbd style="background-color:red;">5</kbd>&nbsp;&nbsp;<kbd style="background-color:#37D605;">3</kbd>
+      </h4>
+    </div>
+    <div id="collapse1" class="panel-collapse collapse">
+      <div class="panel-body">Panel Body</div>
+      <div class="panel-footer">Panel Footer</div>
+    </div>
+  </div>
+</div>
+
+<div class="panel-group">
+  <div class="panel panel-default">
+    <div class="panel-heading">
+      <h4 class="panel-title">
+        <a data-toggle="collapse" href="#collapse1">Collapsible panel</a>
+        &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<kbd>5</kbd>
+      </h4>
+    </div>
+    <div id="collapse1" class="panel-collapse collapse">
+      <div class="panel-body">Panel Body</div>
+      <div class="panel-footer">Panel Footer</div>
+    </div>
+  </div>
+</div>
+
+
+
+
+    <div class="row">
+		<hr />
+    </div>  
+        
+      
+</div>
+
+
+
+</div>
+    
+</body>
+</html>
