@@ -15,14 +15,14 @@
    limitations under the License.
 -->
 <view>
-  <name>PublisherView</name>
-  <label>The Publisher View for Ad Serving App Demo</label>
+  <name>C3View</name>
+  <label>Cluster Config Comparator</label>
   <version>1.0.0</version>
   <resource>
-    <name>AdPublisher</name>
-    <service-class>org.apache.ambari.view.proxy.PublisherServlet</service-class>
+    <name>C3Servlet</name>
+    <service-class>org.apache.ambari.view.proxy.C3Servlet</service-class>
   </resource>
   <instance>
-    <name>AdPublisher</name>
+    <name>C3View</name>
   </instance>
 </view>
