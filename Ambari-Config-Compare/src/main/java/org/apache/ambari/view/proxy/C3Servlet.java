@@ -39,7 +39,7 @@ import java.io.*;
 /**
  * Servlet for phone list view.
  */
-public class PublisherServlet extends HttpServlet {
+public class C3Servlet extends HttpServlet {
 
   /**
    * The view context.

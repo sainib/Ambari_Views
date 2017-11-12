@@ -22,7 +22,15 @@
     <name>C3Servlet</name>
     <service-class>org.apache.ambari.view.proxy.C3Servlet</service-class>
   </resource>
+    <resource>
+        <name>comparator</name>
+        <service-class>org.apache.ambari.view.proxy.C3Service</service-class>
+    </resource>
+      
   <instance>
     <name>C3View</name>
   </instance>
 </view>
+
+
+

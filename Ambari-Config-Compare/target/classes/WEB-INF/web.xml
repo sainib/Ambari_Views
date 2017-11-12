@@ -22,16 +22,16 @@ limitations under the License. Kerberos, LDAP, Custom. Binary/Htt
          xsi:schemaLocation="http://java.sun.com/xml/ns/j2ee http://java.sun.com/xml/ns/j2ee/web-app_2_4.xsd"
          version="2.4">
 
-  <display-name>Publisher View for Ad Serving Application</display-name>
+  <display-name>Cluster Config Comparator</display-name>
   <description>
-    This is the servlet fpr publihser view for Ad Serving App
+    Cluster Config Comparator
   </description>
   <servlet>
-    <servlet-name>PublisherServlet</servlet-name>
-    <servlet-class>org.apache.ambari.view.proxy.PublisherServlet</servlet-class>
+    <servlet-name>C3Servlet</servlet-name>
+    <servlet-class>org.apache.ambari.view.proxy.C3Servlet</servlet-class>
   </servlet>
   <servlet-mapping>
-    <servlet-name>PublisherServlet</servlet-name>
+    <servlet-name>C3Servlet</servlet-name>
     <url-pattern>/servlet</url-pattern>
   </servlet-mapping>
 </web-app>
