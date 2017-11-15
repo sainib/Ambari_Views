@@ -18,6 +18,7 @@
 
 package org.apache.ambari.view.proxy;
 
+//import org.apache.ambari.view.utils.ambari.AmbariApi;
 import org.apache.ambari.view.AmbariHttpException;
 import org.apache.ambari.view.ViewContext;
 import org.json.simple.JSONArray;
@@ -51,16 +52,18 @@ import com.google.inject.Inject;
 public class C3Service {
 
 //  private static final Logger LOG = LoggerFactory.getLogger(C3Service.class);
+private ViewContext context;
 
-  @Inject
-  ViewContext context;
-
+//  private final AmbariApi ambariApi;
   /**
    * Constructor.
    
    * @param context     the ViewContext instance (may not be <code>null</code>)
    */
-  public C3Service() {
+  public C3Service(ViewContext context) {
+    this.context = context;
+ //   this.ambariApi = new AmbariApi(context);
+  //  this.ambariApi.setRequestedBy("view-config-compare");
   }
 
 

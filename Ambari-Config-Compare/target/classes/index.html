@@ -16,6 +16,9 @@
 <body>
 
 <div class="container" style="width:80%;">
+
+<!-- dacolor 44AC34 -->
+<div class="container">
   <h1 style="float:top;">
 
     <img style="margin-left:30px;top:-100px;max-width:200px;" src="./img/hwx.png" />
@@ -23,8 +26,6 @@
 
   </h1>
 
-<!-- dacolor 44AC34 -->
-<div class="container">
     <div class="row">
         <div class="col-md-6" style="border:1px;background-color:#d1d1d1;font-weight:bold;padding:5px;font-size:20px;">
             Cluster 1
@@ -209,7 +210,8 @@
 		<hr />
     </div>  
         
-      
+
+<a id="gp" href="#" onclick="theFunction();">LINK</a>
 </div>
 
 
@@ -219,10 +221,13 @@
 <script type="text/javascript">
 
 $(document).ready(function() {
+    var pn = window.location.pathname;
+    var endPoint = "/api/v1/" + pn.replace("1.0.0", "1.0.0/instances") + "resources/ambariConfigs/comparator/compare";
+
 	alert('1');
 	$.ajax({
 		type: 'POST',
-		url: 'resources/comparator/compare',
+		url: 'ambariConfigs/comparator/compare',
 		data: '{"siteName":"site","configName":"config"}', 
 		success: function(data) { alert('data: ' + data); 	alert('2'); },
 		contentType: "application/json",
@@ -232,10 +237,35 @@ $(document).ready(function() {
 });
 
 
+$( "#gp" ).click(function() {
+         alert(window.location.hostname);
+        alert(window.location.href);
+        alert(window.location.pathname);
+});
 
 </script>
 </body>
 
 </html>
 
+<!--- 
+******
+http://birens0.field.hortonworks.com:8080/api/v1/views/C3View/versions/1.0.0/instances/C3View/resources/ambariConfigs/comparator/compare
+******
+
+
+
+
+
+
+
+window.location.href = http://birens0.field.hortonworks.com:8080/views/C3View/1.0.0/C3View
+
 http://birens-hdp0.field.hortonworks.com:8080/api/v1/views/CAPACITY-SCHEDULER/versions/1.0.0/instances/AUTO_CS_INSTANCE/resources/scheduler/configuration/nodeLabels
+
+http://birens0.field.hortonworks.com:8080/#/main/views/C3View/1.0.0/C3View
+
+http://birens0.field.hortonworks.com:8080/api/v1/views/CAPACITY-SCHEDULER/versions/1.0.0/instances/AUTO_CS_INSTANCE/resources/scheduler/configuration/nodeLabels
+
+
+--->

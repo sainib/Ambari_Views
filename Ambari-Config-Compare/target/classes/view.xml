@@ -23,8 +23,8 @@
     <service-class>org.apache.ambari.view.proxy.C3Servlet</service-class>
   </resource>
     <resource>
-        <name>comparator</name>
-        <service-class>org.apache.ambari.view.proxy.C3Service</service-class>
+        <name>ambariConfigs</name>
+        <service-class>org.apache.ambari.view.proxy.AmbariConfigsService</service-class>
     </resource>
       
   <instance>

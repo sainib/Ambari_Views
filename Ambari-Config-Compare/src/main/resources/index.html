@@ -221,10 +221,13 @@
 <script type="text/javascript">
 
 $(document).ready(function() {
+    var pn = window.location.pathname;
+    var endPoint = "/api/v1/" + pn.replace("1.0.0", "1.0.0/instances") + "resources/ambariConfigs/comparator/compare";
+
 	alert('1');
 	$.ajax({
 		type: 'POST',
-		url: 'resources/comparator/compare',
+		url: 'ambariConfigs/comparator/compare',
 		data: '{"siteName":"site","configName":"config"}', 
 		success: function(data) { alert('data: ' + data); 	alert('2'); },
 		contentType: "application/json",
@@ -246,14 +249,23 @@ $( "#gp" ).click(function() {
 </html>
 
 <!--- 
+******
+http://birens0.field.hortonworks.com:8080/api/v1/views/C3View/versions/1.0.0/instances/C3View/resources/ambariConfigs/comparator/compare
+******
 
+
+
+
+
+
+
+window.location.href = http://birens0.field.hortonworks.com:8080/views/C3View/1.0.0/C3View
 
 http://birens-hdp0.field.hortonworks.com:8080/api/v1/views/CAPACITY-SCHEDULER/versions/1.0.0/instances/AUTO_CS_INSTANCE/resources/scheduler/configuration/nodeLabels
-
 
 http://birens0.field.hortonworks.com:8080/#/main/views/C3View/1.0.0/C3View
 
-http://birens-hdp0.field.hortonworks.com:8080/api/v1/views/CAPACITY-SCHEDULER/versions/1.0.0/instances/AUTO_CS_INSTANCE/resources/scheduler/configuration/nodeLabels
+http://birens0.field.hortonworks.com:8080/api/v1/views/CAPACITY-SCHEDULER/versions/1.0.0/instances/AUTO_CS_INSTANCE/resources/scheduler/configuration/nodeLabels
 
 
 --->

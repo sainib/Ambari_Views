@@ -1,2 +1,3 @@
 org/apache/ambari/view/proxy/C3Service.class
+org/apache/ambari/view/proxy/AmbariConfigsService.class
 org/apache/ambari/view/proxy/C3Servlet.class
