@@ -222,7 +222,8 @@
 
 $(document).ready(function() {
     var pn = window.location.pathname;
-    var endPoint = "/api/v1/" + pn.replace("1.0.0", "1.0.0/instances") + "resources/ambariConfigs/comparator/compare";
+//    var endPoint = "/api/v1/" + pn.replace("1.0.0", "1.0.0/instances") + "resources/ambariConfigs/comparator/compare";
+    var endPoint = "/api/v1" + pn.replace("1.0.0", "1.0.0/instances") + "/resources/ambariConfigs/comparator/compare";
 
 	alert('1');
 	$.ajax({
