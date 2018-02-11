@@ -19,3 +19,16 @@ Description
 -----
 Execute OS command from Ambari View
 
+
+******
+http://birens0.field.hortonworks.com:8080/api/v1/views/C3View/versions/1.0.0/instances/C3View/resources/ambariConfigs/comparator/compare
+
+Usage : curl -H "X-Requested-By: ambari" -X GET -u admin:admin  http://birens0.field.hortonworks.com:8080/api/v1/views/C3View/versions/1.0.0/instances/C3View/resources/ambariConfigs/comparator/compare
+
+******
+window.location.href = http://birens0.field.hortonworks.com:8080/views/C3View/1.0.0/C3View
+http://birens-hdp0.field.hortonworks.com:8080/api/v1/views/CAPACITY-SCHEDULER/versions/1.0.0/instances/AUTO_CS_INSTANCE/resources/scheduler/configuration/nodeLabels
+http://birens0.field.hortonworks.com:8080/#/main/views/C3View/1.0.0/C3View
+http://birens0.field.hortonworks.com:8080/api/v1/views/CAPACITY-SCHEDULER/versions/1.0.0/instances/AUTO_CS_INSTANCE/resources/scheduler/configuration/nodeLabels
+
+
